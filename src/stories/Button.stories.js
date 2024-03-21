@@ -1,5 +1,7 @@
 import { fn } from "@storybook/test";
 import { Button } from "./Button";
+import * as PhosphorIcons from 'phosphor-react';
+
 
 export default {
   title: "Example/ActionButton",
@@ -9,7 +11,7 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: "color" },
+    // backgroundColor: { control: "color" },
     size: {
       control: {
         type: "inline-radio",
@@ -18,26 +20,32 @@ export default {
     },
     type: {
       control: {
-        type: "select",
-        options: ['DefaultT', 'NeutralT', 'ReverseT'],
+        type: "inline-radio",
+        options: ["Default", "Neutral", "Reverse"],
       },
     },
     status: {
       control: {
-        type: "select",
-        options: ['DefaultS', 'HoverS', 'DisabledS'],
-      },
-    },
-    icon: {
-      control: {
         type: "inline-radio",
-        options: ['No', 'Yes'],
+        options: ["DefaultS", "HoverS", "DisabledS"],
       },
     },
+    // icon: {
+    //   control: {
+    //     type: "inline-radio",
+    //     options: ["No", "Yes"],
+    //   },
+    // },
+    // swapIcon: {
+    //   control: {
+    //     type: "selectIcon",
+    //     options: ["ShoppingCart", "WifiHigh", "PhoneCall", "BellRinging"],
+    //   },
+    // },
     swapIcon: {
       control: {
-        type: "inline-radio",
-        options: ['No', 'Yes'],
+        type: 'select', // Custom control type
+        options: Object.keys(PhosphorIcons), // List of icon names
       },
     },
     editText: {
@@ -49,10 +57,19 @@ export default {
   args: { onClick: fn() },
 };
 
+// const Template = (args) => <Button {...args} />;
+
+// export const defaultButton = Template.bind({});
+// defaultButton.args = {
+//   label: "Button",
+//   size: "Default",
+// };
+
 export const Primary = {
   args: {
     primary: true,
     label: "Button",
+    icon: false, 
     // size: "Default",
     // type: "DefaultT",
     // icon: "No",

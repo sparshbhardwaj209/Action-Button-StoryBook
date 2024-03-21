@@ -1,49 +1,72 @@
-.storybook-button {
+.button {
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
+  font-weight: 600;
+  border: none;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  line-height: 24px;
 }
-.storybook-button--primary {
+
+/* .storybook-button--primary { */
   /* color: white; */
   /* background-color: none; */
-  color: #47b647;
-}
+  /* color: #47b647; */
+/* } */
 .storybook-button--secondary {
   color: #333;
   /* background-color: transparent; */
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
 
-.storybook-button--Default {
+.Default {
   font-size: 28px;
   padding: 10px 16px;
 }
-.storybook-button--Small {
+.Small {
   font-size: 24px;
   padding: 11px 20px;
-  /* color: #47b647; */
 }
-.storybook-button--X-Small {
+.X-Small {
   font-size: 22px;
   padding: 12px 24px;
-  /* color: #47b647; */
 }
 
-.storybook-button--DefaultT {
+.DefaultT {
   color: #47b647;
+  background-color: transparent;
 }
-.storybook-button--NeutralT {
-  font-size: 28px;
-  padding: 10px 16px;
+
+.NeutralT {
   color: #282829;
-  background-color: gray;
+  background-color: #F2F3F5;
+  ;
 }
-/* .storybook-button--ReverseT {
-  font-size: 28px;
-  padding: 10px 16px;
+.ReverseT {
+  color: #FCFCFC;
+  background-color: #282829;
+  border: 2px;
+}
+
+
+.DefaultS{
   color: #47b647;
-} */
+}
+
+.HoverS{
+  border: 2px;
+  background-color: #EDFAED;
+  color: #47b647;
+}
+
+.DisabledS{
+ background-color: transparent;
+ color: #282829;
+ opacity: 0.3;
+}
+
+.icon-start {
+  margin-right: 0.5rem;
+}
